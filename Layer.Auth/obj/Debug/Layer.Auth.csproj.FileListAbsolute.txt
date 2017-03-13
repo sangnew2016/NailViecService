@@ -1,0 +1,4 @@
+C:\SANG\Projects\LOC365\NailViec\Layer.Auth\bin\Debug\Layer.Auth.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Auth\bin\Debug\Layer.Auth.pdb
+C:\SANG\Projects\LOC365\NailViec\Layer.Auth\obj\Debug\Layer.Auth.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Auth\obj\Debug\Layer.Auth.pdb

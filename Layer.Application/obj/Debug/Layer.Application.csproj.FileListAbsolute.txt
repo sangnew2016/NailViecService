@@ -1,0 +1,13 @@
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Layer.Application.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Layer.Application.pdb
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\obj\Debug\Layer.Application.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\obj\Debug\Layer.Application.pdb
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Autofac.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Layer.Data.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Layer.Domain.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\EntityFramework.dll
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Layer.Data.pdb
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Layer.Domain.pdb
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\Autofac.xml
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\bin\Debug\EntityFramework.xml
+C:\SANG\Projects\LOC365\NailViec\Layer.Application\obj\Debug\Layer.Application.csprojResolveAssemblyReference.cache
