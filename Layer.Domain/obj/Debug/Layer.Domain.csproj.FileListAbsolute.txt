@@ -13,3 +13,4 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.Reso
 C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.csproj.GenerateResource.Cache
 C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.pdb
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.csprojResolveAssemblyReference.cache

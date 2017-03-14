@@ -11,7 +11,6 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.AspNet.Id
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.IdentityModel.Logging.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.Owin.Cors.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.Owin.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
@@ -33,7 +32,6 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.AspNet.Id
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.IdentityModel.Logging.xml
-C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.Owin.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.Owin.Cors.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
@@ -51,3 +49,6 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Thinktecture.Identi
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Thinktecture.IdentityModel.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.pdb
+C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.csprojResolveAssemblyReference.cache
+C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.Migrations.Initial_Create.resources
+C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.csproj.GenerateResource.Cache
