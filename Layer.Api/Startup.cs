@@ -29,7 +29,7 @@ namespace Layer.Api
                 AccessTokenExpireTimeSpanFromDays = Convert.ToDouble(ConfigurationManager.AppSettings["TokenExpireTimeDays"]),
                 TokenEndpointPath = "/api/authentication/login",
                 AuthorizeEndpointPath = "/api/authentication/externalLogin",
-                AccessTokenIssuer = ConfigurationManager.AppSettings["CandidateAppApiDomain"],
+                AccessTokenIssuer = ConfigurationManager.AppSettings["NailViecAppApiDomain"],
                 AudienceId = ConfigurationManager.AppSettings["as:AudienceId"],
                 AudienceSecret = ConfigurationManager.AppSettings["as:AudienceSecret"],
                 ConnectionString = ConfigurationManager.AppSettings["AuthConnectionStringName"],
