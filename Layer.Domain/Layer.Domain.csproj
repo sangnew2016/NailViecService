@@ -69,6 +69,13 @@
     <Compile Include="Repositories\INewsTypeRepository.cs" />
     <Compile Include="Repositories\INewsStatusRepository.cs" />
     <Compile Include="Repositories\INewsRepository.cs" />
+    <Compile Include="Resources\AppResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AppResourceKey.cs" />
+    <Compile Include="Resources\ResourceManager.cs" />
     <Compile Include="Services\RequestObjectProvider.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +84,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\AppResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>AppResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

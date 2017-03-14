@@ -1,0 +1,356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="String" xml:space="preserve">
+    <value>Applicant</value>
+    <comment>Applicant</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value>Application</value>
+    <comment>Application</comment>
+  </data>
+  <data name="String10" xml:space="preserve">
+    <value>Email</value>
+    <comment>Email</comment>
+  </data>
+  <data name="String11" xml:space="preserve">
+    <value>ERROR_APPLICANT_ID_NOT_EXISTED</value>
+    <comment>Applicant Id is not existed.</comment>
+  </data>
+  <data name="String12" xml:space="preserve">
+    <value>ERROR_APPLICATION_ID_NOT_EXISTED</value>
+    <comment>Application Id is not existed.</comment>
+  </data>
+  <data name="String13" xml:space="preserve">
+    <value>ERROR_APPLICATION_IS_SUBMITTED</value>
+    <comment>This application was submitted.</comment>
+  </data>
+  <data name="String14" xml:space="preserve">
+    <value>ERROR_CURRENT_PASSWORD_INVALID</value>
+    <comment>Current password is invalid.</comment>
+  </data>
+  <data name="String15" xml:space="preserve">
+    <value>ERROR_DATE_TIME_RANGE_INVALID</value>
+    <comment>From date must be before To date.</comment>
+  </data>
+  <data name="String16" xml:space="preserve">
+    <value>ERROR_EMAIL_EXISTED</value>
+    <comment>Email is existed.</comment>
+  </data>
+  <data name="String17" xml:space="preserve">
+    <value>ERROR_EMAIL_NOT_CONFIRMED</value>
+    <comment>This email hasn't been confirmed yet.</comment>
+  </data>
+  <data name="String18" xml:space="preserve">
+    <value>ERROR_EMAIL_NOT_EXISTED</value>
+    <comment>Email wasn't existed.</comment>
+  </data>
+  <data name="String19" xml:space="preserve">
+    <value>ERROR_EMAIL_NOT_EXISTED_OR_CONFIRMED</value>
+    <comment>Email isn't existed or confirmed. </comment>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Attachment</value>
+    <comment>Attachment</comment>
+  </data>
+  <data name="String20" xml:space="preserve">
+    <value>ERROR_FIELD_REQUIRED</value>
+    <comment>{0} is required.</comment>
+  </data>
+  <data name="String21" xml:space="preserve">
+    <value>ERROR_ID_EXISTED</value>
+    <comment>{0}Id is existed.</comment>
+  </data>
+  <data name="String22" xml:space="preserve">
+    <value>ERROR_ID_NOT_EXISTED</value>
+    <comment>{0}Id isn't existed.</comment>
+  </data>
+  <data name="String23" xml:space="preserve">
+    <value>ERROR_INVALID_CHARACTER_RANGE</value>
+    <comment>{0} must be in range of {1} to {2} characters.</comment>
+  </data>
+  <data name="String24" xml:space="preserve">
+    <value>ERROR_INVALID_USER_NAME_OR_PASSWORD</value>
+    <comment>The user name or password is incorrect.</comment>
+  </data>
+  <data name="String25" xml:space="preserve">
+    <value>ERROR_JOB_ID_NOT_EXISTED</value>
+    <comment>Job Id is not existed.</comment>
+  </data>
+  <data name="String26" xml:space="preserve">
+    <value>ERROR_LANGUAGE_SKILL_EXISTED</value>
+    <comment>This language is existed.</comment>
+  </data>
+  <data name="String27" xml:space="preserve">
+    <value>ERROR_MIN_LENGTH</value>
+    <comment>The {0} must be at least {1} characters long.</comment>
+  </data>
+  <data name="String28" xml:space="preserve">
+    <value>ERROR_MONTH_YEAR_RANGE_FROM_MONTH_WITHOUT_YEAR</value>
+    <comment>From year is required for the month.</comment>
+  </data>
+  <data name="String29" xml:space="preserve">
+    <value>ERROR_MONTH_YEAR_RANGE_INVALID</value>
+    <comment>From date must be before To date.</comment>
+  </data>
+  <data name="String3" xml:space="preserve">
+    <value>Certification</value>
+    <comment>Certification</comment>
+  </data>
+  <data name="String30" xml:space="preserve">
+    <value>ERROR_MONTH_YEAR_RANGE_NOT_IN_FUTURE</value>
+    <comment>From time must be in the past.</comment>
+  </data>
+  <data name="String31" xml:space="preserve">
+    <value>ERROR_MONTH_YEAR_RANGE_TO_MONTH_WITHOUT_YEAR</value>
+    <comment>To year is required for the month.</comment>
+  </data>
+  <data name="String32" xml:space="preserve">
+    <value>ERROR_PASSWORD_CONFIRMATION_NOT_MATCH</value>
+    <comment>The password and confirmation password do not match.</comment>
+  </data>
+  <data name="String33" xml:space="preserve">
+    <value>ERROR_SEND_CONFIRMATION_MAIL_FAILED</value>
+    <comment>Confirmation email was failed to sent.</comment>
+  </data>
+  <data name="String34" xml:space="preserve">
+    <value>ERROR_SEND_RESET_PASSWORD_MAIL_FAILED</value>
+    <comment>Reset password email was failed to sent.</comment>
+  </data>
+  <data name="String35" xml:space="preserve">
+    <value>ERROR_SKILL_EXISTED</value>
+    <comment>This skill is existed.</comment>
+  </data>
+  <data name="String36" xml:space="preserve">
+    <value>ERROR_UNEXPECTED</value>
+    <comment>Unexpected error. Please try again later.</comment>
+  </data>
+  <data name="String37" xml:space="preserve">
+    <value>ERROR_USER_NAME_NOT_EXISTED</value>
+    <comment>User name is invalid.</comment>
+  </data>
+  <data name="String38" xml:space="preserve">
+    <value>FileName</value>
+    <comment>File name</comment>
+  </data>
+  <data name="String39" xml:space="preserve">
+    <value>FirstName</value>
+    <comment>First name</comment>
+  </data>
+  <data name="String4" xml:space="preserve">
+    <value>Company</value>
+    <comment>Company</comment>
+  </data>
+  <data name="String40" xml:space="preserve">
+    <value>FromTime</value>
+    <comment>From time</comment>
+  </data>
+  <data name="String41" xml:space="preserve">
+    <value>FromYear</value>
+    <comment>From year</comment>
+  </data>
+  <data name="String42" xml:space="preserve">
+    <value>FullName</value>
+    <comment>Full name</comment>
+  </data>
+  <data name="String43" xml:space="preserve">
+    <value>Job</value>
+    <comment>Job</comment>
+  </data>
+  <data name="String44" xml:space="preserve">
+    <value>Language</value>
+    <comment>Language</comment>
+  </data>
+  <data name="String45" xml:space="preserve">
+    <value>LanguageSkill</value>
+    <comment>LanguageSkill</comment>
+  </data>
+  <data name="String46" xml:space="preserve">
+    <value>LastName</value>
+    <comment>Last name</comment>
+  </data>
+  <data name="String47" xml:space="preserve">
+    <value>Name</value>
+    <comment>Name</comment>
+  </data>
+  <data name="String48" xml:space="preserve">
+    <value>Password</value>
+    <comment>Password</comment>
+  </data>
+  <data name="String49" xml:space="preserve">
+    <value>PhoneOrEmail</value>
+    <comment>Phone or email</comment>
+  </data>
+  <data name="String5" xml:space="preserve">
+    <value>ConfirmPassword</value>
+    <comment>Confirm Password</comment>
+  </data>
+  <data name="String50" xml:space="preserve">
+    <value>Project</value>
+    <comment>Project</comment>
+  </data>
+  <data name="String51" xml:space="preserve">
+    <value>Reference</value>
+    <comment>Reference</comment>
+  </data>
+  <data name="String52" xml:space="preserve">
+    <value>School</value>
+    <comment>School</comment>
+  </data>
+  <data name="String53" xml:space="preserve">
+    <value>Skill</value>
+    <comment>Skill</comment>
+  </data>
+  <data name="String54" xml:space="preserve">
+    <value>Title</value>
+    <comment>Title</comment>
+  </data>
+  <data name="String55" xml:space="preserve">
+    <value>Token</value>
+    <comment>Token</comment>
+  </data>
+  <data name="String56" xml:space="preserve">
+    <value>ToYear</value>
+    <comment>To year</comment>
+  </data>
+  <data name="String57" xml:space="preserve">
+    <value>Url</value>
+    <comment>Url</comment>
+  </data>
+  <data name="String58" xml:space="preserve">
+    <value>WorkExperience</value>
+    <comment>WorkExperience</comment>
+  </data>
+  <data name="String6" xml:space="preserve">
+    <value>Country</value>
+    <comment>Country</comment>
+  </data>
+  <data name="String7" xml:space="preserve">
+    <value>Course</value>
+    <comment>Course</comment>
+  </data>
+  <data name="String8" xml:space="preserve">
+    <value>CurriculumVitae</value>
+    <comment>CurriculumVitae</comment>
+  </data>
+  <data name="String9" xml:space="preserve">
+    <value>Education</value>
+    <comment>Education</comment>
+  </data>
+</root>

@@ -5,3 +5,11 @@ C:\SANG\Projects\LOC365\NailViec\Layer.Domain\obj\Debug\Layer.Domain.pdb
 C:\SANG\Projects\LOC365\NailViec\Layer.Domain\bin\Debug\Autofac.dll
 C:\SANG\Projects\LOC365\NailViec\Layer.Domain\bin\Debug\Autofac.xml
 C:\SANG\Projects\LOC365\NailViec\Layer.Domain\obj\Debug\Layer.Domain.csprojResolveAssemblyReference.cache
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\bin\Debug\Layer.Domain.dll
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\bin\Debug\Layer.Domain.pdb
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\bin\Debug\Autofac.dll
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\bin\Debug\Autofac.xml
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.Resources.AppResource.resources
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.csproj.GenerateResource.Cache
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.dll
+C:\SANG\Projects\LOC365\NailViecService\Layer.Domain\obj\Debug\Layer.Domain.pdb
