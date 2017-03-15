@@ -17,7 +17,6 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Antlr3.Runtime.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\EntityFramework.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\EntityFramework.SqlServer.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Application.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Auth.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Domain.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.AspNet.Identity.Core.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.AspNet.Identity.EntityFramework.dll
@@ -48,13 +47,7 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.Web.WebPages.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.Web.WebPages.Razor.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\WebGrease.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Autofac.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.Owin.Security.Jwt.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Thinktecture.IdentityModel.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.IdentityModel.Tokens.Jwt.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.Owin.Cors.dll
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.Web.Cors.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Application.pdb
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Auth.pdb
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Domain.pdb
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Newtonsoft.Json.xml
@@ -85,12 +78,6 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.Owin.Security.Tw
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.Web.Http.Owin.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Autofac.xml
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.Owin.Security.Jwt.xml
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Thinktecture.IdentityModel.pdb
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Thinktecture.IdentityModel.xml
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.IdentityModel.Tokens.Jwt.pdb
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\System.IdentityModel.Tokens.Jwt.xml
-C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Microsoft.Owin.Cors.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\obj\Debug\Layer.Api.csprojResolveAssemblyReference.cache
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\obj\Debug\Layer.Api.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\obj\Debug\Layer.Api.pdb

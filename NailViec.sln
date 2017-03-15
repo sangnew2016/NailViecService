@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Auth", "Layer.Auth\La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Api", "Layer.Api\Layer.Api.csproj", "{1A487AF4-F663-4D83-A97C-598A279C84F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Admin", "Presentation.Admin\Presentation.Admin.csproj", "{49BB495E-6B23-4ABA-A375-654224C39000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Authentication", "Layer.Authentication\Layer.Authentication.csproj", "{54BE534A-64A5-4CA6-83C0-53A48692DEF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,14 @@ Global
 		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

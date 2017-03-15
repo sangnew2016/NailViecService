@@ -290,10 +290,6 @@
       <Project>{210225eb-bf69-4218-b961-16755f4cef7a}</Project>
       <Name>Layer.Application</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Layer.Auth\Layer.Auth.csproj">
-      <Project>{1f371bc7-5e10-4f2b-901e-72cc0e0aca2f}</Project>
-      <Name>Layer.Auth</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Layer.Domain\Layer.Domain.csproj">
       <Project>{7B784959-382F-4BDF-8998-D5D3F84C0E8B}</Project>
       <Name>Layer.Domain</Name>
@@ -317,7 +313,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55685</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:60000/</IISUrl>
+          <IISUrl>http://localhost:6000/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

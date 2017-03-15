@@ -49,6 +49,6 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Thinktecture.Identi
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\bin\Debug\Thinktecture.IdentityModel.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.pdb
-C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.csprojResolveAssemblyReference.cache
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.Migrations.Initial_Create.resources
 C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.csproj.GenerateResource.Cache
+C:\SANG\Projects\LOC365\NailViecService\Layer.Auth\obj\Debug\Layer.Auth.csprojResolveAssemblyReference.cache
