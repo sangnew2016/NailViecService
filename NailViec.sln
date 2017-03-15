@@ -3,11 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NailViec", "NailViec\NailViec.csproj", "{DC823C4D-AADB-4743-9A83-DB97EE803FB1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{210225EB-BF69-4218-B961-16755F4CEF7A} = {210225EB-BF69-4218-B961-16755F4CEF7A}
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Data", "Layer.Data\Layer.Data.csproj", "{D9EE4909-3E10-4C88-99BB-F220D4D435D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Domain", "Layer.Domain\Layer.Domain.csproj", "{7B784959-382F-4BDF-8998-D5D3F84C0E8B}"
@@ -20,16 +15,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Application", "Layer.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Auth", "Layer.Auth\Layer.Auth.csproj", "{1F371BC7-5E10-4F2B-901E-72CC0E0ACA2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Api", "Layer.Api\Layer.Api.csproj", "{1A487AF4-F663-4D83-A97C-598A279C84F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.Admin", "Presentation.Admin\Presentation.Admin.csproj", "{49BB495E-6B23-4ABA-A375-654224C39000}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Authentication", "Layer.Authentication\Layer.Authentication.csproj", "{54BE534A-64A5-4CA6-83C0-53A48692DEF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DC823C4D-AADB-4743-9A83-DB97EE803FB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC823C4D-AADB-4743-9A83-DB97EE803FB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC823C4D-AADB-4743-9A83-DB97EE803FB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC823C4D-AADB-4743-9A83-DB97EE803FB1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9EE4909-3E10-4C88-99BB-F220D4D435D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D9EE4909-3E10-4C88-99BB-F220D4D435D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9EE4909-3E10-4C88-99BB-F220D4D435D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,6 +43,18 @@ Global
 		{1F371BC7-5E10-4F2B-901E-72CC0E0ACA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F371BC7-5E10-4F2B-901E-72CC0E0ACA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F371BC7-5E10-4F2B-901E-72CC0E0ACA2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A487AF4-F663-4D83-A97C-598A279C84F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49BB495E-6B23-4ABA-A375-654224C39000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54BE534A-64A5-4CA6-83C0-53A48692DEF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
