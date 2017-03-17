@@ -81,3 +81,5 @@ C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Autofac.xml
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\obj\Debug\Layer.Api.csprojResolveAssemblyReference.cache
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\obj\Debug\Layer.Api.dll
 C:\SANG\Projects\LOC365\NailViecService\Layer.Api\obj\Debug\Layer.Api.pdb
+C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Authentication.dll
+C:\SANG\Projects\LOC365\NailViecService\Layer.Api\bin\Layer.Authentication.pdb
