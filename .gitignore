@@ -54,6 +54,10 @@ ipch/
 *.vsp
 *.vspx
 Layer.Api/Logs/
+Layer.Application/bin/
+Layer.Application/obj/
+Layer.Data/bin/
+Layer.Data/obj/
 Layer.Domain/bin/
 Layer.Domain/obj/
 
