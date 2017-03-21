@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Application", "Layer.
 		{7B784959-382F-4BDF-8998-D5D3F84C0E8B} = {7B784959-382F-4BDF-8998-D5D3F84C0E8B}
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{685A46A2-79D8-4671-B0EB-8B13EE9532B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Api", "Layer.Api\Layer.Api.csproj", "{121A1113-98FB-4A07-863C-730DB53C0FDD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Auth", "Layer.Auth\Layer.Auth.csproj", "{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +37,14 @@ Global
 		{210225EB-BF69-4218-B961-16755F4CEF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{210225EB-BF69-4218-B961-16755F4CEF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{210225EB-BF69-4218-B961-16755F4CEF7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121A1113-98FB-4A07-863C-730DB53C0FDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121A1113-98FB-4A07-863C-730DB53C0FDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121A1113-98FB-4A07-863C-730DB53C0FDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121A1113-98FB-4A07-863C-730DB53C0FDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
