@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Http;
+using System.Web.Routing;
 
 namespace Layer.Api
 {
@@ -9,6 +10,8 @@ namespace Layer.Api
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            RouteTable.Routes.Ignore("{resource}.axd/{*pathInfo}");
+
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
 
@@ -19,7 +22,10 @@ namespace Layer.Api
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+            if (Request.Url.AbsolutePath.ToLowerInvariant().Contains("elmah.axd"))
+            {
+                // Check if user can see elmah and handle unauthorised users (return 401/redirect to login page/etc...)
+            }
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)

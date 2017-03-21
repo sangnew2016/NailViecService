@@ -80,7 +80,7 @@
     </Compile>
     <Compile Include="Resources\AppResourceKey.cs" />
     <Compile Include="Resources\ResourceManager.cs" />
-    <Compile Include="Services\ExceptionLogger.cs" />
+    <Compile Include="Services\Logger.cs" />
     <Compile Include="Services\RequestObjectProvider.cs" />
   </ItemGroup>
   <ItemGroup>
