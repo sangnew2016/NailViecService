@@ -14,7 +14,7 @@ x64/
 build/
 [Bb]in/
 [Oo]bj/
-
+*.bin/
 
 *_i.c
 *_p.c
@@ -53,3 +53,7 @@ ipch/
 *.psess
 *.vsp
 *.vspx
+Layer.Api/Logs/
+Layer.Domain/bin/
+Layer.Domain/obj/
+

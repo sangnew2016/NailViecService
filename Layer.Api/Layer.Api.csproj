@@ -51,6 +51,10 @@
       <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
       <Private>True</Private>
@@ -222,6 +226,10 @@
     <ProjectReference Include="..\Layer.Auth\Layer.Auth.csproj">
       <Project>{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}</Project>
       <Name>Layer.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Layer.Domain\Layer.Domain.csproj">
+      <Project>{7B784959-382F-4BDF-8998-D5D3F84C0E8B}</Project>
+      <Name>Layer.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
