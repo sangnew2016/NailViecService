@@ -1,35 +1,51 @@
-﻿namespace Layer.Auth.Migrations
+namespace Layer.Auth.Migrations
 {
+    using Infrastructure;
     using Microsoft.AspNet.Identity;
     using Microsoft.AspNet.Identity.EntityFramework;
-    using Models;
     using System;
     using System.Data.Entity.Migrations;
+    using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AuthDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ApplicationDbContext>
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = true;
+            AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AuthDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
-            var defaultUserId = "d69d1135-32d4-41a0-8c1e-18dffd006595";
-            var defaultUserName = "default@gmail.com";
+            //  This method will be called after migrating to the latest version.
 
-            var manager = new CustomUserManager(new UserStore<CustomUser>(context));
-            var existedUser = manager.FindById(defaultUserId);
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
 
-            if (existedUser == null)
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
+
+            var user = new ApplicationUser()
             {
-                existedUser = new CustomUser() { UserName = defaultUserName, Email = defaultUserName, Id = defaultUserId, EmailConfirmed = true };
-                IdentityResult result = manager.Create(existedUser, "Abc123@");
-                if (!result.Succeeded)
-                {
-                    throw new Exception("Create user failed");
-                }
+                UserName = "sang.thach@orientsoftware.net",
+                Email = "sang.thach@orientsoftware.net",
+                EmailConfirmed = true,
+                FirstName = "Sang",
+                LastName = "Thach",
+                HomeTown = "VN",
+                Level = 1,
+                JoinDate = DateTime.Now.AddYears(-3)
+            };
+
+            manager.Create(user, "Aa123456!");
+
+            if (roleManager.Roles.Count() == 0)
+            {
+                roleManager.Create(new IdentityRole { Name = "SuperAdmin" });
+                roleManager.Create(new IdentityRole { Name = "Admin"});
+                roleManager.Create(new IdentityRole { Name = "User"});
             }
+
+            var adminUser = manager.FindByName("SuperPowerUser");
+
+            manager.AddToRoles(adminUser.Id, new string[] { "SuperAdmin", "Admin" });
         }
     }
 }

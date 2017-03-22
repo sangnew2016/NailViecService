@@ -1,22 +1,20 @@
 ﻿using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.DataHandler.Encoder;
 using System;
+using System.Configuration;
 using System.IdentityModel.Tokens;
 using Thinktecture.IdentityModel.Tokens;
 
 namespace Layer.Auth.Providers
 {
-    internal class CustomJwtFormat : ISecureDataFormat<AuthenticationTicket>
+    public class CustomJwtFormat : ISecureDataFormat<AuthenticationTicket>
     {
-        private readonly string _issuer = string.Empty;
-        private readonly string _audienceId = string.Empty;
-        private readonly string _symmetricKeyAsBase64 = string.Empty;
 
-        public CustomJwtFormat(string issuer, string audienceId, string symmetricKeyAsBase64)
+        private readonly string _issuer = string.Empty;
+
+        public CustomJwtFormat(string issuer)
         {
             _issuer = issuer;
-            _audienceId = audienceId;
-            _symmetricKeyAsBase64 = symmetricKeyAsBase64;
         }
 
         public string Protect(AuthenticationTicket data)
@@ -26,7 +24,11 @@ namespace Layer.Auth.Providers
                 throw new ArgumentNullException("data");
             }
 
-            var keyByteArray = TextEncodings.Base64Url.Decode(_symmetricKeyAsBase64);
+            string audienceId = ConfigurationManager.AppSettings["as:AudienceId"];
+
+            string symmetricKeyAsBase64 = ConfigurationManager.AppSettings["as:AudienceSecret"];
+
+            var keyByteArray = TextEncodings.Base64Url.Decode(symmetricKeyAsBase64);
 
             var signingKey = new HmacSigningCredentials(keyByteArray);
 
@@ -34,7 +36,7 @@ namespace Layer.Auth.Providers
 
             var expires = data.Properties.ExpiresUtc;
 
-            var token = new JwtSecurityToken(_issuer, _audienceId, data.Identity.Claims, issued.Value.UtcDateTime, expires.Value.UtcDateTime, signingKey);
+            var token = new JwtSecurityToken(_issuer, audienceId, data.Identity.Claims, issued.Value.UtcDateTime, expires.Value.UtcDateTime, signingKey);
 
             var handler = new JwtSecurityTokenHandler();
 
@@ -45,8 +47,7 @@ namespace Layer.Auth.Providers
 
         public AuthenticationTicket Unprotect(string protectedText)
         {
-            if (protectedText == null) throw new ArgumentNullException("protectedText");
-            return new AuthenticationTicket(new System.Security.Claims.ClaimsIdentity(), new AuthenticationProperties());
+            throw new NotImplementedException();
         }
     }
 }
