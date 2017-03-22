@@ -29,6 +29,7 @@ namespace Layer.Auth.Migrations
                 EmailConfirmed = true,
                 FirstName = "Sang",
                 LastName = "Thach",
+                HomeTown = "VN",
                 Level = 1,
                 JoinDate = DateTime.Now.AddYears(-3)
             };

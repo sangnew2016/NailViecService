@@ -131,9 +131,9 @@
     <Compile Include="Infrastructure\ClaimsAuthorizationAttribute.cs" />
     <Compile Include="Infrastructure\ExtendedClaimsProvider.cs" />
     <Compile Include="Infrastructure\RolesFromClaims.cs" />
-    <Compile Include="Migrations\201703200936245_InitalCreate.cs" />
-    <Compile Include="Migrations\201703200936245_InitalCreate.Designer.cs">
-      <DependentUpon>201703200936245_InitalCreate.cs</DependentUpon>
+    <Compile Include="Migrations\201703220832166_InitialCreate.cs" />
+    <Compile Include="Migrations\201703220832166_InitialCreate.Designer.cs">
+      <DependentUpon>201703220832166_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -153,8 +153,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703200936245_InitalCreate.resx">
-      <DependentUpon>201703200936245_InitalCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201703220832166_InitialCreate.resx">
+      <DependentUpon>201703220832166_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

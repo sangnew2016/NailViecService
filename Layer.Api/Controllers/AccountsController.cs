@@ -71,6 +71,7 @@ namespace Layer.Api.Controllers
                 Email = createUserModel.Email,
                 FirstName = createUserModel.FirstName,
                 LastName = createUserModel.LastName,
+                HomeTown = createUserModel.HomeTown,
                 Level = 3,
                 JoinDate = DateTime.Now.Date,
             };

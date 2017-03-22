@@ -23,6 +23,10 @@ namespace Layer.Auth.Infrastructure
         [Required]
         public DateTime JoinDate { get; set; }
 
+        [Required]
+        [MaxLength(100)]
+        public string HomeTown { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
             var userIdentity = await manager.CreateIdentityAsync(this, authenticationType);

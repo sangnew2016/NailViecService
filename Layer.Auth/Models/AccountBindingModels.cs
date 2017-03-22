@@ -21,6 +21,10 @@ namespace Layer.Auth.Models
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
+        [Required]
+        [Display(Name = "Home Town")]
+        public string HomeTown { get; set; }
+
         [Display(Name = "Role Name")]
         public string RoleName { get; set; }
 
