@@ -1,4 +1,5 @@
 ﻿using Elmah.Contrib.WebApi;
+using Layer.Api.Attributes;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
 
@@ -11,7 +12,7 @@ namespace Layer.Api
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             //config.SuppressDefaultHostAuthentication();
-            //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));            
+            //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
             config.Services.Add(typeof(IExceptionLogger), new ElmahExceptionLogger());
 
@@ -33,6 +34,8 @@ namespace Layer.Api
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Filters.Add(new ElmahHandleWebApiErrorAttribute());
 
         }
     }
