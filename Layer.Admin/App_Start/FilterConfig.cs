@@ -1,4 +1,4 @@
-﻿using System.Web;
+﻿using Layer.Admin.Attributes;
 using System.Web.Mvc;
 
 namespace Layer.Admin
@@ -8,6 +8,7 @@ namespace Layer.Admin
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new ElmahHandleErrorAttribute());
         }
     }
 }

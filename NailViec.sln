@@ -16,10 +16,16 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{685A46A2-79D8-4671-B0EB-8B13EE9532B8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Api", "Layer.Api\Layer.Api.csproj", "{121A1113-98FB-4A07-863C-730DB53C0FDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{210225EB-BF69-4218-B961-16755F4CEF7A} = {210225EB-BF69-4218-B961-16755F4CEF7A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Auth", "Layer.Auth\Layer.Auth.csproj", "{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Layer.Admin", "Layer.Admin\Layer.Admin.csproj", "{C494ADAE-1466-40B0-9F55-056A9CDA5E40}"
+	ProjectSection(ProjectDependencies) = postProject
+		{210225EB-BF69-4218-B961-16755F4CEF7A} = {210225EB-BF69-4218-B961-16755F4CEF7A}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

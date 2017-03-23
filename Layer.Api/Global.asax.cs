@@ -10,8 +10,8 @@ namespace Layer.Api
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            RouteTable.Routes.Ignore("{resource}.axd/{*pathInfo}");
-
+            //RouteTable.Routes.Ignore("{resource}.axd/{*pathInfo}");
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
 
@@ -22,10 +22,7 @@ namespace Layer.Api
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-            if (Request.Url.AbsolutePath.ToLowerInvariant().Contains("elmah.axd"))
-            {
-                // Check if user can see elmah and handle unauthorised users (return 401/redirect to login page/etc...)
-            }
+
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
@@ -35,6 +32,16 @@ namespace Layer.Api
 
         protected void Application_Error(object sender, EventArgs e)
         {
+            //try
+            //{
+            //    Exception exception = Server.GetLastError();
+            //    System.Diagnostics.Debug.WriteLine(exception);
+            //    Elmah.ErrorSignal.FromCurrentContext().Raise(exception);
+            //}
+            //catch (Exception ex)
+            //{
+            //    Elmah.ErrorSignal.FromCurrentContext().Raise(ex);
+            //}
 
         }
 
