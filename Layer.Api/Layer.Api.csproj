@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.4.0\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Elmah, Version=1.2.14706.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
       <Private>True</Private>
@@ -217,11 +221,15 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\AutofacConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
-    <Compile Include="App_Start\UnhandledExceptionFilter.cs" />
+    <Compile Include="Attributes\GlobalExceptionHandler.cs" />
+    <Compile Include="Attributes\UnhandledExceptionFilter.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Attributes\ElmahHandleWebApiErrorAttribute.cs" />
+    <Compile Include="Attributes\SaveChangesActionFilterAttribute.cs" />
+    <Compile Include="Attributes\UnhandledExceptionLogger.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\ClaimsController.cs" />
@@ -236,9 +244,17 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Layer.Application\Layer.Application.csproj">
+      <Project>{210225EB-BF69-4218-B961-16755F4CEF7A}</Project>
+      <Name>Layer.Application</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Layer.Auth\Layer.Auth.csproj">
       <Project>{F36E98F7-19FC-47F5-B8B6-57A1FC62FE0E}</Project>
       <Name>Layer.Auth</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Layer.Data\Layer.Data.csproj">
+      <Project>{D9EE4909-3E10-4C88-99BB-F220D4D435D1}</Project>
+      <Name>Layer.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Layer.Domain\Layer.Domain.csproj">
       <Project>{7B784959-382F-4BDF-8998-D5D3F84C0E8B}</Project>

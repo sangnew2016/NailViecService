@@ -1,4 +1,5 @@
-﻿using Elmah.Contrib.WebApi;
+﻿using Autofac;
+using Elmah.Contrib.WebApi;
 using Layer.Api.Attributes;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
@@ -9,6 +10,8 @@ namespace Layer.Api
     {
         public static void Register(HttpConfiguration config)
         {
+            IContainer _container;
+
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             //config.SuppressDefaultHostAuthentication();
@@ -35,8 +38,16 @@ namespace Layer.Api
                 defaults: new { id = RouteParameter.Optional }
             );
 
+            //Register Filter
             config.Filters.Add(new ElmahHandleWebApiErrorAttribute());
 
+            var builder = AutofacConfig.Configure();
+            _container = builder.Build();
+            config.Filters.Add(_container.Resolve<SaveChangesActionFilterAttribute>());
+
+            //Register Exception
+            config.Services.Replace(typeof(IExceptionLogger), new UnhandledExceptionLogger());
+            config.Services.Replace(typeof(IExceptionHandler), new GlobalExceptionHandler());
         }
     }
 }
