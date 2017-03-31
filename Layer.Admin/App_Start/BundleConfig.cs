@@ -38,9 +38,9 @@ namespace Layer.Admin
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include(
-                 "~/Content/bootstrap.css",
-                 "~/Content/Site.css"));
+            //bundles.Add(new StyleBundle("~/Content/css").Include(
+            //     "~/Content/bootstrap.css",
+            //     "~/Content/Site.css"));
         }
     }
 }
