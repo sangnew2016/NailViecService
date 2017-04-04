@@ -1,0 +1,23 @@
+﻿.my-container--inline {
+    display: inline-block;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+table > thead > tr > th.details-control {
+    padding-left: 10px;
+}
+
+td.details-control {
+    background: url('../img/details_open.png') no-repeat center center;
+    cursor: pointer;
+    min-width: 90px;
+}
+tr.shown td.details-control {
+    background: url('../img/details_close.png') no-repeat center center;
+}
+
+table.dataTable.select tbody tr,
+table.dataTable thead th:first-child {
+  cursor: pointer;
+}

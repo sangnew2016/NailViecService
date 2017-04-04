@@ -1,32 +1,253 @@
-﻿<!-- ko with: home -->
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+﻿<!-- Search Shop -->
 <div class="row">
-    <div class="col-md-4">
-        <h2>Your information</h2>
-        <p>This section shows how you can call ASP.NET Web API to get the user details.</p>
-        <p data-bind="text: myHometown"></p>
-       
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
-    </div>
+    <div class="col-xs-12">
+        <div class="box dark">
+            <header>
+                <div class="icons"><i class="icon-th-large"></i></div>
+                <h5>Shop Conditions</h5>
+                <div class="toolbar">
+                    <ul class="nav">
+                        <li>
+                            <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#searchShopContainer">
+                                <i class="icon-chevron-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="searchShopContainer" class="accordion-body collapse in body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="shopName" class="control-label col-xs-2">Name</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopName" placeholder="Shop Name" class="form-control">
+                        </div>
 
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET Single Page Application (SPA) helps you build applications that include significant client-side interactions using HTML, CSS, and JavaScript.
-            It's now easier than ever before to getting started writing highly interactive web applications.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=273732">Learn more &raquo;</a></p>
-    </div>
+                        <label for="shopStatus" class="control-label col-xs-2">Status</label>
+                        <div class="col-xs-4">
+                            <select id="shopStatus" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
 
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+                    <div class="form-group">
+                        <label for="shopArea" class="control-label col-xs-2">Area</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopArea" placeholder="Shop Area" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shopAddress" class="control-label col-xs-2">Address</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopAddress" placeholder="Shop Address" class="form-control">
+                        </div>
+
+                        <label for="shopRadiusArea" class="control-label col-xs-2">Near Radius Area</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopRadiusArea" placeholder="Near Radius Area" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shopPhone" class="control-label col-xs-2">Phone</label>
+
+                        <div class="col-xs-4">
+                            <input type="text" id="shopPhone" placeholder="Shop Phone" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-2 text-right">
+                            &nbsp;
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="my-container--inline">
+                                <button class="btn btn-primary">Search Shops</button>
+                            </div>
+                            <div class="my-container--inline">
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Job Condition
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1"></span></div> With Status History
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
     </div>
 </div>
+<!--End search shop-->
 
-<!-- /ko -->
+<!-- Start Shop Grid-->
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Results of Shops
+            </div>
+            <div class="panel-body">
+                <table id="resultOfShops" class="display select" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th><input name="select_all" value="1" type="checkbox"></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Shop Grid-->
+
+
+<!-- Search Job -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box dark">
+            <header>
+                <div class="icons"><i class="icon-th-large"></i></div>
+                <h5>Job Conditions</h5>
+                <div class="toolbar">
+                    <ul class="nav">
+                        <li>
+                            <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#searchJobContainer">
+                                <i class="icon-chevron-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="searchJobContainer" class="accordion-body collapse in body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="jobTitle" class="control-label col-xs-2">Title</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobTitle" placeholder="Job Title" class="form-control">
+                        </div>
+
+                        <label for="jobStatus" class="control-label col-xs-2">Status</label>
+                        <div class="col-xs-4">
+                            <select id="jobStatus" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobBody" class="control-label col-xs-2">Body</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobBody" placeholder="Job Body" class="form-control">
+                        </div>
+
+                        <label for="jobType" class="control-label col-xs-2">Type</label>
+                        <div class="col-xs-4">
+                            <select id="jobType" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobPhoneContact" class="control-label col-xs-2">Phone Contact</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobPhoneContact" placeholder="Phone Contact" class="form-control">
+                        </div>
+
+                        <label for="jobSalary" class="control-label col-xs-2">Salary</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobSalary" placeholder="Salary" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            &nbsp;
+                        </div>
+
+                        <label for="jobPostedDate" class="control-label col-xs-2">Posted Date</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobPostedDate" placeholder="Posted Date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-2 text-right">
+                            &nbsp;
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="my-container--inline">
+                                <button class="btn btn-primary">Search Jobs</button>
+                            </div>
+                            <div class="my-container--inline">
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Shop Condition
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1"></span></div> With Status History
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End search shop-->
+
+<!-- Start Shop Grid-->
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Results of Jobs
+            </div>
+            <div class="panel-body">
+                <table id="resultOfJobs" class="display" width="100%"></table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Shop Grid-->

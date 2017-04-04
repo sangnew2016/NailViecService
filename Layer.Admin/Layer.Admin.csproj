@@ -249,10 +249,13 @@
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\assets\app\data-temp.js" />
+    <Content Include="Content\assets\app\init.js" />
     <Content Include="Content\assets\css\bootstrap-fileupload.min.css" />
     <Content Include="Content\assets\css\bootstrap-wysihtml5-hack.css" />
     <Content Include="Content\assets\css\calendar.css" />
     <Content Include="Content\assets\css\countdown.css" />
+    <Content Include="Content\assets\css\custom.css" />
     <Content Include="Content\assets\css\error.css" />
     <Content Include="Content\assets\css\jqstooltip.css" />
     <Content Include="Content\assets\css\jquery-ui.css" />
@@ -282,6 +285,8 @@
     <Content Include="Content\assets\img\demoImage.jpg" />
     <Content Include="Content\assets\img\demoImage2.jpg" />
     <Content Include="Content\assets\img\demoUpload.jpg" />
+    <Content Include="Content\assets\img\details_close.png" />
+    <Content Include="Content\assets\img\details_open.png" />
     <Content Include="Content\assets\img\logo.png" />
     <Content Include="Content\assets\img\moreNoti.jpg" />
     <Content Include="Content\assets\img\moreNoti_old.jpg" />
