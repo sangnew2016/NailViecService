@@ -251,6 +251,11 @@
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
     <Content Include="Content\assets\app\data-temp.js" />
     <Content Include="Content\assets\app\init.js" />
+    <Content Include="Content\assets\app\main-search-shop-detail.js" />
+    <Content Include="Content\assets\app\main-search-job-detail.js" />
+    <Content Include="Content\assets\app\main-search-jobs.js" />
+    <Content Include="Content\assets\app\main-search-shops.js" />
+    <Content Include="Content\assets\app\common-services.js" />
     <Content Include="Content\assets\css\bootstrap-fileupload.min.css" />
     <Content Include="Content\assets\css\bootstrap-wysihtml5-hack.css" />
     <Content Include="Content\assets\css\calendar.css" />
@@ -2316,6 +2321,10 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="Views\Home\_ShopSearching.cshtml" />
+    <Content Include="Views\Home\_JobSearching.cshtml" />
+    <Content Include="Views\Home\_EditShopPopup.cshtml" />
+    <Content Include="Views\Home\_EditJobPopup.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

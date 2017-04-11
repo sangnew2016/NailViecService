@@ -1,0 +1,84 @@
+﻿
+<!-- Edit Shop Popup-->
+<div id="editShopContainer" class="modal fade">
+
+    <div id="editShopPopup">
+        <div class="modal-header">
+            <button type="button" class="close">&times;</button>
+            <h4 class="modal-title">Edit Shop</h4>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-6">
+
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="shopName" class="control-label col-xs-4">Name</label>
+                            <div class="col-xs-8">
+                                <input type="text" id="shopName" placeholder="Shop Name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="shopAddress" class="control-label col-xs-4">Address</label>
+                            <div class="col-xs-8">
+                                <input type="text" id="shopAddress" placeholder="Shop Address" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="shopPhone" class="control-label col-xs-4">Phone</label>
+                            <div class="col-xs-8">
+                                <input type="text" id="shopPhone" placeholder="Shop Phone" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="shopStatus" class="control-label col-xs-4">Status</label>
+                            <div class="col-xs-8">
+                                <input type="text" id="shopStatus" placeholder="Shop Status" class="form-control">
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="col-xs-6">
+                    <ul>
+                        <li class="list-item">
+                            <div class="list-item--left">Country</div>
+                            <div class="list-item--right">USA</div>
+                        </li>
+                        <li class="list-item">
+                            <div class="list-item--left">City</div>
+                            <div class="list-item--right">TEXAS</div>
+                        </li>
+                        <li class="list-item">
+                            <div class="list-item--left">Latitude</div>
+                            <div class="list-item--right">0.000343423</div>
+                        </li>
+                        <li class="list-item">
+                            <div class="list-item--left">Longtitude</div>
+                            <div class="list-item--right">0.000676553</div>
+                        </li>
+                        <li>
+                            <div class="box warning">
+                                <header>
+                                    <h5>Map with markers</h5>
+                                </header>
+                                <div class="body">
+                                    <div id="gmaps-marker" style="width:100%;height:400px;"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+    </div>
+
+
+</div>

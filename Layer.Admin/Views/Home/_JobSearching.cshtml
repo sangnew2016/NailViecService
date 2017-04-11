@@ -1,0 +1,133 @@
+﻿<!-- Search Job -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box dark">
+            <header>
+                <div class="icons"><i class="icon-th-large"></i></div>
+                <h5>Job Conditions</h5>
+                <div class="toolbar">
+                    <ul class="nav">
+                        <li>
+                            <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#searchJobContainer">
+                                <i class="icon-chevron-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="searchJobContainer" class="accordion-body collapse in body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="jobTitle" class="control-label col-xs-2">Title</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobTitle" placeholder="Job Title" class="form-control">
+                        </div>
+
+                        <label for="jobStatus" class="control-label col-xs-2">Status</label>
+                        <div class="col-xs-4">
+                            <select id="jobStatus" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobBody" class="control-label col-xs-2">Body</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobBody" placeholder="Job Body" class="form-control">
+                        </div>
+
+                        <label for="jobType" class="control-label col-xs-2">Type</label>
+                        <div class="col-xs-4">
+                            <select id="jobType" class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jobPhoneContact" class="control-label col-xs-2">Phone Contact</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobPhoneContact" placeholder="Phone Contact" class="form-control">
+                        </div>
+
+                        <label for="jobSalary" class="control-label col-xs-2">Salary</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobSalary" placeholder="Salary" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            &nbsp;
+                        </div>
+
+                        <label for="jobPostedDate" class="control-label col-xs-2">Posted Date</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="jobPostedDate" placeholder="Posted Date" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-2 text-right">
+                            &nbsp;
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="my-container--inline">
+                                <button class="btn btn-primary">Search Jobs</button>
+                            </div>
+                            <div class="my-container--inline">
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Shop Condition
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1"></span></div> With Status History
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End search shop-->
+
+<!-- Start Shop Grid-->
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Results of Jobs
+            </div>
+            <div class="panel-body">
+                <table id="resultOfJobs" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Shop Grid-->
