@@ -1,68 +1,100 @@
 ﻿var mainSearchShops = (function () {
     var tableResultOfShops;
-    var resultOfShopsId = 'resultOfShops';
     var rows_selected = [];
 
-    return {
-        loadResults: loadResults,
-        setEventsOnResult: setEventsOnResult
+    var shopSearchingModel = {
+        name: '',
+        area: '',
+        address: '',
+        phone: '',
+        shopStatusId: 0,
+        nearAreaRadius: 0,
+        withJobCondition: 0,
+        withShopHistory: 0
     };
 
-    function loadResults(callback) {
-        var dataSet = tempService.getDataTempForShops();
-        tableResultOfShops = $('#' + resultOfShopsId).DataTable({
-            data: dataSet,
-            columns: [
-                {
-                    "className": 'details-control',
-                    "orderable": false,
-                    "data": null,
-                    "defaultContent": ''
-                },
-                { "data": "name" },
-                { "data": "position" },
-                { "data": "office" },
-                { "data": "salary" }
-            ],
-            columnDefs: [{
-                'targets': 0,
-                'searchable': false,
-                'orderable': false,
-                'width': '1%',
-                'className': 'dt-body-center',
-                'render': function (data, type, full, meta) {
-                    return '<input type="checkbox">';
-                }
-            }],
-            order: [[1, 'asc']],
-            rowCallback: function (row, data, dataIndex) {
-                // Get row ID
-                var rowId = data[0];
+    return {
+        load: load,
+        setEvents: setEvents,
+        getShopSearchingModel: getShopSearchingModel
+    };
 
-                // If row ID is in the list of selected row IDs
-                if ($.inArray(rowId, rows_selected) !== -1) {
-                    //$(row).find('input[type="checkbox"]').prop('checked', true);
-                    //$(row).addClass('selected');
+    function load(callback) {
+        loadDatatable();
+        loadSelect();
+
+        function loadDatatable() {
+            var dataSet = tempService.getDataTempForShops();
+            tableResultOfShops = $(dom.shop.searchResults).DataTable({
+                data: dataSet,
+                columns: [
+                    {
+                        "className": 'details-control',
+                        "orderable": false,
+                        "data": null,
+                        "defaultContent": ''
+                    },
+                    { "data": "name" },
+                    { "data": "position" },
+                    { "data": "office" },
+                    { "data": "salary" }
+                ],
+                columnDefs: [{
+                    'targets': 0,
+                    'searchable': false,
+                    'orderable': false,
+                    'width': '1%',
+                    'className': 'dt-body-center',
+                    'render': function (data, type, full, meta) {
+                        return '<input type="checkbox">';
+                    }
+                }],
+                order: [[1, 'asc']],
+                rowCallback: function (row, data, dataIndex) {
+                    // Get row ID
+                    var rowId = data[0];
+
+                    // If row ID is in the list of selected row IDs
+                    if ($.inArray(rowId, rows_selected) !== -1) {
+                        //$(row).find('input[type="checkbox"]').prop('checked', true);
+                        //$(row).addClass('selected');
+                    }
                 }
-            }
-        });
+            });
+        }
+
+        function loadSelect() {
+            var shopStatusList = [
+                { id: 1, name: 'Test 1' },
+                { id: 2, name: 'Test 2' },
+                { id: 3, name: 'Test 3' },
+                { id: 4, name: 'Test 4' },
+                { id: 5, name: 'Test 5' }
+            ];
+            $(dom.shop.status).select({ data: shopStatusList });
+        }
     }
 
-    function setEventsOnResult(callback) {
-        $('#' + resultOfShopsId + ' tbody').on('click', 'tr', function (event) {
+    function setEvents(callback) {
+        $('#btnAddShop').on('click', function () {
+            mainSearchShopDetail.showEditPopup(null);
+        });
+
+        $(dom.shop.searchResults + ' tbody').on('click', 'tr', function (event) {
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
             }
             else {
                 tableResultOfShops.$('tr.selected').removeClass('selected');
                 $(this).addClass('selected');
-                mainSearchShopDetail.showEditPopup(tableResultOfShops.$('tr.selected'));
+                var rowData = tableResultOfShops.row(this).data();
+                mainSearchShopDetail.showEditPopup(rowData);
             }
             event.stopPropagation();
         });
 
         // Add event listener for opening and closing details
-        $('#' + resultOfShopsId + ' tbody').on('click', 'td.details-control', function (event) {
+        $(dom.shop.searchResults + ' tbody').on('click', 'td.details-control', function (event) {
             var tr = $(this).closest('tr');
             var row = tableResultOfShops.row(tr);
 
@@ -99,7 +131,7 @@
         }
 
         // Handle click on checkbox
-        $('#' + resultOfShopsId + ' tbody').on('click', 'input[type="checkbox"]', function (e) {
+        $(dom.shop.searchResults + ' tbody').on('click', 'input[type="checkbox"]', function (e) {
             var $row = $(this).closest('tr');
 
             // Get row data
@@ -133,17 +165,41 @@
             e.stopPropagation();
         });
 
+
+        $(dom.shop.btnSearch).on('click', function () {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var model = getShopSearchingModel();
+            console.log(model);
+            return;
+
+            //call server: (shops | jobs)
+            $.ajax({
+                type: 'POST',
+                url: '/data/save',
+                data: model,
+                //dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (req, status, err) {
+                    console.log('something went wrong', status, err);
+                }
+            });
+        });
+
         // Handle click on table cells with checkboxes
-        $('#' + resultOfShopsId).on('click', 'tbody td, thead th:first-child', function (e) {
+        $(dom.shop.searchResults).on('click', 'tbody td, thead th:first-child', function (e) {
             $(this).parent().find('input[type="checkbox"]').trigger('click');
         });
 
         // Handle click on "Select all" control
         $('thead input[name="select_all"]', tableResultOfShops.table().container()).on('click', function (e) {
             if (this.checked) {
-                $('#' + resultOfShopsId + ' tbody input[type="checkbox"]:not(:checked)').trigger('click');
+                $(dom.shop.searchResults + ' tbody input[type="checkbox"]:not(:checked)').trigger('click');
             } else {
-                $('#' + resultOfShopsId + ' tbody input[type="checkbox"]:checked').trigger('click');
+                $(dom.shop.searchResults + ' tbody input[type="checkbox"]:checked').trigger('click');
             }
 
             // Prevent click event from propagating to parent
@@ -155,38 +211,80 @@
             // Update state of "Select all" control
             updateDataTableSelectAllCtrl(tableResultOfShops);
         });
-    }
 
-    //
-    // Updates "Select all" control in a data table
-    //
-    function updateDataTableSelectAllCtrl(table) {
-        var $table = tableResultOfShops.table().node();
-        var $chkbox_all = $('tbody input[type="checkbox"]', $table);
-        var $chkbox_checked = $('tbody input[type="checkbox"]:checked', $table);
-        var chkbox_select_all = $('thead input[name="select_all"]', $table).get(0);
+        //
+        // Updates "Select all" control in a data table
+        //
+        function updateDataTableSelectAllCtrl(table) {
+            var $table = tableResultOfShops.table().node();
+            var $chkbox_all = $('tbody input[type="checkbox"]', $table);
+            var $chkbox_checked = $('tbody input[type="checkbox"]:checked', $table);
+            var chkbox_select_all = $('thead input[name="select_all"]', $table).get(0);
 
-        // If none of the checkboxes are checked
-        if ($chkbox_checked.length === 0) {
-            chkbox_select_all.checked = false;
-            if ('indeterminate' in chkbox_select_all) {
-                chkbox_select_all.indeterminate = false;
-            }
+            // If none of the checkboxes are checked
+            if ($chkbox_checked.length === 0) {
+                chkbox_select_all.checked = false;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = false;
+                }
 
-            // If all of the checkboxes are checked
-        } else if ($chkbox_checked.length === $chkbox_all.length) {
-            chkbox_select_all.checked = true;
-            if ('indeterminate' in chkbox_select_all) {
-                chkbox_select_all.indeterminate = false;
-            }
+                // If all of the checkboxes are checked
+            } else if ($chkbox_checked.length === $chkbox_all.length) {
+                chkbox_select_all.checked = true;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = false;
+                }
 
-            // If some of the checkboxes are checked
-        } else {
-            chkbox_select_all.checked = true;
-            if ('indeterminate' in chkbox_select_all) {
-                chkbox_select_all.indeterminate = true;
+                // If some of the checkboxes are checked
+            } else {
+                chkbox_select_all.checked = true;
+                if ('indeterminate' in chkbox_select_all) {
+                    chkbox_select_all.indeterminate = true;
+                }
             }
         }
+    }
+
+    function getShopSearchingModel() {
+        setShopSearchingModel();
+
+        return shopSearchingModel;
+    }
+
+    function setShopSearchingModel() {
+        var value = mapDOMintoModel();
+
+        shopSearchingModel.name = value.name;
+        shopSearchingModel.area = value.area;
+        shopSearchingModel.address = value.address;
+        shopSearchingModel.phone = value.phone;
+        shopSearchingModel.shopStatusId = value.shopStatusId;
+        shopSearchingModel.nearAreaRadius = value.nearAreaRadius;
+        shopSearchingModel.withJobCondition = value.withJobCondition;
+        shopSearchingModel.withShopHistory = value.withShopHistory;
+    }
+
+    function mapDOMintoModel() {
+        var name = $(dom.shop.name).val();
+        var area = $(dom.shop.area).val();
+        var address = $(dom.shop.address).val();
+        var phone = $(dom.shop.phone).val();
+        var nearAreaRadius = $(dom.shop.nearAreaRadius).val();
+        var shopStatus = $(dom.shop.status).select();
+        var shopStatusId = shopStatus ? shopStatus['id'] : null;
+        var withJobCondition = $(dom.shop.withJobCondition + ':checked').length > 0;
+        var withShopHistory = $(dom.shop.withShopHistory + ':checked').length > 0;
+
+        return {
+            name: name,
+            area: area,
+            address: address,
+            phone: phone,
+            shopStatusId: shopStatusId,
+            nearAreaRadius: nearAreaRadius,
+            withJobCondition: withJobCondition,
+            withShopHistory: withShopHistory
+        };
     }
 
 })();

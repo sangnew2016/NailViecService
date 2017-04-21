@@ -249,7 +249,9 @@
     <Content Include="App_Readme\Elmah.txt" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\assets\app\customs\plugins\select.js" />
     <Content Include="Content\assets\app\data-temp.js" />
+    <Content Include="Content\assets\app\config.js" />
     <Content Include="Content\assets\app\init.js" />
     <Content Include="Content\assets\app\main-search-shop-detail.js" />
     <Content Include="Content\assets\app\main-search-job-detail.js" />

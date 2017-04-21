@@ -3,33 +3,68 @@
     var resultOfJobsId = 'resultOfJobs';
     var rows_selected = [];
 
-    return {
-        loadResults: loadResults,
-        setEventsOnResult: setEventsOnResult
+    var jobSearchingModel = {
+        title: '',
+        body: '',
+        phoneContact: '',
+        salary: '',
+        jobStatusId: 0,
+        jobTypeId: 0,
+
+        withShopCondition: false,
+        withJobHistory: false
     };
 
-    function loadResults(callback) {
-        var dataSet = tempService.getDataTempForShops();
-        tableResultOfJobs = $('#' + resultOfJobsId).DataTable({
-            data: dataSet,
-            columns: [
-                {
-                    "className": 'details-control',
-                    "orderable": false,
-                    "data": null,
-                    "defaultContent": '',
-                    "width": '30'
-                },
-                { "data": "name" },
-                { "data": "position" },
-                { "data": "office" },
-                { "data": "salary" }
-            ],
-            order: [[1, 'asc']]
-        });
+    return {
+        load: load,
+        setEvents: setEvents,
+        getJobSearchingModel: getJobSearchingModel
+    };
+
+    function load(callback) {
+        loadDatatable();
+        loadSelect();
+
+        function loadDatatable() {
+            var dataSet = tempService.getDataTempForShops();
+            tableResultOfJobs = $('#' + resultOfJobsId).DataTable({
+                data: dataSet,
+                columns: [
+                    {
+                        "className": 'details-control',
+                        "orderable": false,
+                        "data": null,
+                        "defaultContent": '',
+                        "width": '30'
+                    },
+                    { "data": "name" },
+                    { "data": "position" },
+                    { "data": "office" },
+                    { "data": "salary" }
+                ],
+                order: [[1, 'asc']]
+            });
+        }
+
+        function loadSelect() {
+            var jobStatusList = [
+                { id: 1, name: 'Test 1' },
+                { id: 2, name: 'Test 2' },
+                { id: 3, name: 'Test 3' },
+                { id: 4, name: 'Test 4' },
+                { id: 5, name: 'Test 5' }
+            ];
+            $(dom.job.status).select({ data: jobStatusList });
+            $(dom.job.type).select({ data: jobStatusList });
+        }
+
     }
 
-    function setEventsOnResult(callback) {
+    function setEvents(callback) {
+        $('#btnAddJob').on('click', function () {
+            mainSearchJobDetail.showEditPopup(null);
+        });
+
         $('#' + resultOfJobsId + ' tbody').on('click', 'tr', function (event) {
             if ($(this).hasClass('selected')) {
                 $(this).removeClass('selected');
@@ -60,6 +95,30 @@
             event.stopPropagation();
         });
 
+        // Search
+        $(dom.job.btnSearch).on('click', function () {
+            event.preventDefault();
+            event.stopPropagation();
+
+            var model = getJobSearchingModel();
+            console.log(model);
+            return;
+
+            //call server: (shops | jobs)
+            $.ajax({
+                type: 'POST',
+                url: '/data/save',
+                data: model,
+                //dataType: 'json',
+                success: function (data) {
+                    console.log(data);
+                },
+                error: function (req, status, err) {
+                    console.log('something went wrong', status, err);
+                }
+            });
+        });
+
         /* Formatting function for row details - modify as you need */
         function format(d) {
             // `d` is the original data object for the row
@@ -88,5 +147,50 @@
 
     }
 
+    function getJobSearchingModel() {
+        setJobSearchingModel();
+
+        return jobSearchingModel;
+    }
+
+    function setJobSearchingModel() {
+        var value = mapDOMintoModel();
+
+        jobSearchingModel.title = value.title;
+        jobSearchingModel.body = value.body;
+        jobSearchingModel.phoneContact = value.phoneContact;
+        jobSearchingModel.salary = value.salary;
+        jobSearchingModel.jobStatusId = value.jobStatusId;
+        jobSearchingModel.jobTypeId = value.jobTypeId;
+
+        jobSearchingModel.withShopCondition = value.withShopCondition;
+        jobSearchingModel.withJobHistory = value.withJobHistory;
+    }
+
+    function mapDOMintoModel() {
+        var title = $(dom.job.title).val();
+        var body = $(dom.job.body).val();
+        var phoneContact = $(dom.job.phoneContact).val();
+        var salary = $(dom.job.salary).val();
+        var jobStatus = $(dom.job.status).select();
+        var jobStatusId = jobStatus ? jobStatus['id'] : null;
+        var jobType = $(dom.job.type).select();
+        var jobTypeId = jobType ? jobType['id'] : null;
+
+        var withShopCondition = $(dom.job.withShopCondition + ':checked').length > 0;
+        var withJobHistory = $(dom.job.withJobHistory + ':checked').length > 0;
+
+        return {
+            title: title,
+            body: body,
+            phoneContact: phoneContact,
+            salary: salary,
+            jobStatusId: jobStatusId,
+            jobTypeId: jobTypeId,
+
+            withShopCondition: withShopCondition,
+            withJobHistory: withJobHistory
+        };
+    }
 
 })();

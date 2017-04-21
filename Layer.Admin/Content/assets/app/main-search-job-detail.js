@@ -4,8 +4,13 @@
     };
 
     function showEditPopup(item) {
-        commonServices.replaceHTMLOnPopup('#editJobPopup');
+        commonServices.replaceHTMLOnJobPopup('#editJobPopup');
         commonServices.showModal();
+
+        if (item) {
+            //....
+        }
+
         commonServices.setEventsOnModal();
     }
 

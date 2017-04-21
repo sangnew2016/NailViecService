@@ -25,13 +25,7 @@
 
                         <label for="shopStatus" class="control-label col-xs-2">Status</label>
                         <div class="col-xs-4">
-                            <select id="shopStatus" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <div class="dropdown" id="shopStatus"></div>
                         </div>
                     </div>
 
@@ -50,7 +44,7 @@
 
                         <label for="shopRadiusArea" class="control-label col-xs-2">Near Radius Area</label>
                         <div class="col-xs-4">
-                            <input type="text" id="shopRadiusArea" placeholder="Near Radius Area" class="form-control">
+                            <input type="text" id="shopAreaRadius" placeholder="Near Radius Area" class="form-control">
                         </div>
                     </div>
 
@@ -68,17 +62,17 @@
                         </div>
                         <div class="col-xs-8">
                             <div class="my-container--inline">
-                                <button class="btn btn-primary">Search Shops</button>
+                                <button class="btn btn-primary" id="btnShopSearch">Search Shops</button>
                             </div>
                             <div class="my-container--inline">
                                 <div class="checkbox">
                                     <label>
-                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Job Condition
+                                        <div class="checker"><span class="checked"><input id="withJobCondition" class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Job Condition
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1"></span></div> With Status History
+                                        <div class="checker"><span class="checked"><input id="withShopHistory" class="uniform" type="checkbox" value="option1"></span></div> With Status History
                                     </label>
                                 </div>
                             </div>
@@ -98,7 +92,8 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                Results of Shops
+                <span>Results of Shops</span>
+                <button type="button" class="btn btn-primary" id="btnAddShop">Add Shop</button>
             </div>
             <div class="panel-body">
                 <table id="resultOfShops" class="display select" cellspacing="0" width="100%">

@@ -25,13 +25,7 @@
 
                         <label for="jobStatus" class="control-label col-xs-2">Status</label>
                         <div class="col-xs-4">
-                            <select id="jobStatus" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <div class="dropdown" id="jobStatus"></div>
                         </div>
                     </div>
 
@@ -43,13 +37,7 @@
 
                         <label for="jobType" class="control-label col-xs-2">Type</label>
                         <div class="col-xs-4">
-                            <select id="jobType" class="form-control">
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
+                            <div class="dropdown" id="jobType"></div>
                         </div>
                     </div>
 
@@ -82,17 +70,17 @@
                         </div>
                         <div class="col-xs-8">
                             <div class="my-container--inline">
-                                <button class="btn btn-primary">Search Jobs</button>
+                                <button class="btn btn-primary" id="btnJobSearch">Search Jobs</button>
                             </div>
                             <div class="my-container--inline">
                                 <div class="checkbox">
                                     <label>
-                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Shop Condition
+                                        <div class="checker"><span class="checked"><input id="withShopCondition" class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Shop Condition
                                     </label>
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <div class="checker"><span class="checked"><input class="uniform" type="checkbox" value="option1"></span></div> With Status History
+                                        <div class="checker"><span class="checked"><input id="withJobHistory" class="uniform" type="checkbox" value="option1"></span></div> With Status History
                                     </label>
                                 </div>
                             </div>
@@ -112,7 +100,8 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                Results of Jobs
+                <span>Results of Jobs</span>
+                <button type="button" class="btn btn-primary" id="btnAddJob">Add Job</button>
             </div>
             <div class="panel-body">
                 <table id="resultOfJobs" class="display" cellspacing="0" width="100%">

@@ -1,9 +1,12 @@
 ﻿var commonServices = (function () {
     var outstandingForOverlay = 40;
+    var htmlShopPopupTemp = null;
+    var htmlJobPopupTemp = null;
 
     return {
         showModal: showModal,
-        replaceHTMLOnPopup: replaceHTMLOnPopup,
+        replaceHTMLOnShopPopup: replaceHTMLOnShopPopup,
+        replaceHTMLOnJobPopup: replaceHTMLOnJobPopup,
         setEventsOnModal: setEventsOnModal
     };
 
@@ -18,9 +21,14 @@
         $('#overlay .popup-container').css({ 'marginTop': topAfterScroll });
     }
 
-    function replaceHTMLOnPopup(selector) {
-        var html = $(selector).html();
-        $('#overlay .popup-container').html(html);
+    function replaceHTMLOnShopPopup(selector) {
+        if (htmlShopPopupTemp === null) htmlShopPopupTemp = $(selector);
+        $('#overlay .popup-container').html(htmlShopPopupTemp);
+    }
+
+    function replaceHTMLOnJobPopup(selector) {
+        if (htmlJobPopupTemp === null) htmlJobPopupTemp = $(selector);
+        $('#overlay .popup-container').html(htmlJobPopupTemp);
     }
 
     function setEventsOnModal() {

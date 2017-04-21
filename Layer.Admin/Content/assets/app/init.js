@@ -6,11 +6,18 @@
 
     function init() {
         //SHOPS
-        mainSearchShops.loadResults();
-        mainSearchShops.setEventsOnResult();
+        mainSearchShops.load();
+        mainSearchShops.setEvents();
         //JOBS
-        mainSearchJobs.loadResults();
-        mainSearchJobs.setEventsOnResult();
+        mainSearchJobs.load();
+        mainSearchJobs.setEvents();
+
+
+        $('.dropdown .dropdown-menu').delegate('a', 'click', function () {
+            //sammy.setLocation($(this).attr('href'));
+            $(this).closest('.dropdown-menu').trigger('click');
+            return false;
+        });
     }
 
 })();
