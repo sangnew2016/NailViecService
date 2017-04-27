@@ -1,0 +1,123 @@
+﻿<!-- Search Shop -->
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box dark">
+            <header>
+                <div class="icons"><i class="icon-th-large"></i></div>
+                <h5>Shop Conditions</h5>
+                <div class="toolbar">
+                    <ul class="nav">
+                        <li>
+                            <a class="accordion-toggle minimize-box" data-toggle="collapse" href="#searchShopContainer">
+                                <i class="icon-chevron-up"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <div id="searchShopContainer" class="accordion-body collapse in body">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="shopName" class="control-label col-xs-2">Name</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopName" placeholder="Shop Name" class="form-control">
+                        </div>
+
+                        <label for="shopStatus" class="control-label col-xs-2">Status</label>
+                        <div class="col-xs-4">
+                            <div class="dropdown" id="shopStatus"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shopArea" class="control-label col-xs-2">Area</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopArea" placeholder="Shop Area" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shopAddress" class="control-label col-xs-2">Address</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopAddress" placeholder="Shop Address" class="form-control">
+                        </div>
+
+                        <label for="shopRadiusArea" class="control-label col-xs-2">Near Radius Area</label>
+                        <div class="col-xs-4">
+                            <input type="text" id="shopAreaRadius" placeholder="Near Radius Area" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="shopPhone" class="control-label col-xs-2">Phone</label>
+
+                        <div class="col-xs-4">
+                            <input type="text" id="shopPhone" placeholder="Shop Phone" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-2 text-right">
+                            &nbsp;
+                        </div>
+                        <div class="col-xs-8">
+                            <div class="my-container--inline">
+                                <button class="btn btn-primary" id="btnShopSearch">Search Shops</button>
+                            </div>
+                            <div class="my-container--inline">
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input id="withJobCondition" class="uniform" type="checkbox" value="option1" checked="checked"></span></div> With Job Condition
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <div class="checker"><span class="checked"><input id="withShopHistory" class="uniform" type="checkbox" value="option1"></span></div> With Status History
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End search shop-->
+
+<!-- Start Shop Grid-->
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span>Results of Shops</span>
+                <button type="button" class="btn btn-primary" id="btnAddShop">Add Shop</button>
+            </div>
+            <div class="panel-body">
+                <table id="resultOfShops" class="display select" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th><input name="select_all" value="1" type="checkbox"></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Position</th>
+                            <th>Office</th>
+                            <th>Salary</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Shop Grid-->

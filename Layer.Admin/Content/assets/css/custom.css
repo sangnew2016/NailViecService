@@ -1,0 +1,91 @@
+﻿.my-container--inline {
+    display: inline-block;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+.list-item {
+    list-style-type: none;
+    padding: 8px 0;
+    clear: both;
+}
+
+.list-item--left {
+    float: left;
+    font-weight: bold;
+}
+
+.list-item--right {
+    float: right;
+}
+
+
+
+.modal-ku {
+  width: 750px;
+  margin: auto;
+}
+
+table > thead > tr > th.details-control {
+    padding-left: 10px;
+}
+
+td.details-control {
+    background: url('../img/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../img/details_close.png') no-repeat center center;
+}
+
+table.dataTable.select tbody tr,
+table.dataTable thead th:first-child {
+  cursor: pointer;
+}
+
+#resultOfShops td.details-control {
+    width: 9%;
+}
+
+#resultOfJobs td.details-control {
+    width: 6%;
+}
+
+
+/*============================
+    Modal Popup
+=============================*/
+html, body {
+     height:100%;
+     margin:0;
+     padding:0;
+}
+
+#overlay {
+     visibility: hidden;
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width:100%;
+     height:100%;
+     text-align:center;
+     background-color:rgba(0, 0, 0, 0.5);
+     z-index: 1000;
+}
+
+#overlay .popup-container {
+     width: 67%;
+     margin: 100px auto;
+     background-color: #fff;
+     border:1px solid #000;
+     text-align:center;
+
+     background-color: #ffffff;
+     border: 1px solid #999999;
+     border: 1px solid rgba(0, 0, 0, 0.2);
+     border-radius: 6px;
+     outline: none;
+     -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+     background-clip: padding-box;
+}
