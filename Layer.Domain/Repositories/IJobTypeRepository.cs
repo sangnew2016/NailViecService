@@ -3,7 +3,8 @@ using System.Collections.Generic;
 
 namespace Layer.Domain.Repositories
 {
-    public interface IShopRepository: IBaseRepository<Shop>
+    public interface IJobTypeRepository: IBaseRepository<JobType>
     {
+
     }
 }

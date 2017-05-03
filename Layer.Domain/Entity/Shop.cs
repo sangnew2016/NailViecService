@@ -8,12 +8,16 @@ namespace Layer.Domain.Entity
         public string Name { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public string Longtitude { get; set; }
-        public string Latitude { get; set; }
-        public Guid UserId { get; set; }
-        public long CityId { get; set; }
 
-        //public User User { get; set; }
-        public City City { get; set; }
+
+
+        public long ShopStatusId { get; set; }
+        public ShopStatus ShopStatus { get; set; }
+
+        public long PlaceId { get; set; }
+        public Place Place { get; set; }
+
+        public long ShopOwnerId { get; set; }
+        public ShopOwner ShopOwner { get; set; }
     }
 }

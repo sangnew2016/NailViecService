@@ -2,13 +2,12 @@
 
 namespace Layer.Data.Mapping
 {
-    public class ShopMapping: BaseMapping<Shop, long>
+    public class ShopOwnerMapping: BaseMapping<Shop, long>
     {
-        public ShopMapping() {
+        public ShopOwnerMapping() {
             Property(x => x.Name).IsRequired();
             Property(x => x.Phone).IsRequired();
             Property(x => x.Address).IsRequired();
-            Property(x => x.PlaceId).IsRequired();
         }
     }
 }

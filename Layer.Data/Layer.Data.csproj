@@ -55,20 +55,19 @@
   <ItemGroup>
     <Compile Include="DataModule.cs" />
     <Compile Include="Mapping\BaseMapping.cs" />
-    <Compile Include="Mapping\NewsTypeMapping.cs" />
-    <Compile Include="Mapping\NewsStatusMapping.cs" />
-    <Compile Include="Mapping\NewsMapping.cs" />
-    <Compile Include="Mapping\NewsHistoryMapping.cs" />
+    <Compile Include="Mapping\ShopOwnerMapping.cs" />
+    <Compile Include="Mapping\ShopStatusHistoryMapping.cs" />
+    <Compile Include="Mapping\ShopStatusMapping.cs" />
+    <Compile Include="Mapping\JobTypeMapping.cs" />
+    <Compile Include="Mapping\JobStatusMapping.cs" />
+    <Compile Include="Mapping\JobMapping.cs" />
+    <Compile Include="Mapping\JobStatusHistoryMapping.cs" />
     <Compile Include="Mapping\ShopMapping.cs" />
-    <Compile Include="Mapping\CityMapping.cs" />
-    <Compile Include="Mapping\StateMapping.cs" />
-    <Compile Include="Mapping\CountryMapping.cs" />
     <Compile Include="Migrations\201703130450457_AddFieldForInitation.cs" />
     <Compile Include="Migrations\201703130450457_AddFieldForInitation.Designer.cs">
       <DependentUpon>201703130450457_AddFieldForInitation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Migrations\CountryInitData.cs" />
     <Compile Include="NailViecAppContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryBase\ContextService.cs" />
@@ -76,14 +75,16 @@
     <Compile Include="RepositoryBase\NailViecContextProvider.cs" />
     <Compile Include="RepositoryBase\UnitOfWork.cs" />
     <Compile Include="RepositoryBase\UnitOfWorkFactory.cs" />
-    <Compile Include="Repository\CityRepository.cs" />
-    <Compile Include="Repository\StateRepository.cs" />
-    <Compile Include="Repository\NewsHistoryRepository.cs" />
-    <Compile Include="Repository\CountryRepository.cs" />
+    <Compile Include="Repository\BaseRepository.cs" />
+    <Compile Include="Repository\PlaceRepository.cs" />
+    <Compile Include="Repository\JobTypeRepository.cs" />
+    <Compile Include="Repository\ShopStatusHistoryRepository.cs" />
+    <Compile Include="Repository\ShopOwnerRepository.cs" />
+    <Compile Include="Repository\ShopStatusRepository.cs" />
+    <Compile Include="Repository\JobStatusHistoryRepository.cs" />
     <Compile Include="Repository\ShopRepository.cs" />
-    <Compile Include="Repository\NewsTypeRepository.cs" />
-    <Compile Include="Repository\NewsStatusRepository.cs" />
-    <Compile Include="Repository\NewsRepository.cs" />
+    <Compile Include="Repository\JobStatusRepository.cs" />
+    <Compile Include="Repository\JobRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Layer.Domain\Layer.Domain.csproj">

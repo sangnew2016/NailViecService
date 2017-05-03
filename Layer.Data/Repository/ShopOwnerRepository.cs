@@ -6,9 +6,9 @@ using System.Linq;
 
 namespace Layer.Data.Repository
 {
-    internal class ShopRepository : BaseRepository<Shop>, IShopRepository
+    internal class ShopOwnerRepository : BaseRepository<ShopOwner>, IShopOwnerRepository
     {
-        public ShopRepository(GenericRepository<Shop> genericRepository) : base(genericRepository)
+        public ShopOwnerRepository(GenericRepository<ShopOwner> genericRepository) : base(genericRepository)
         {
 
         }

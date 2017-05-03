@@ -16,8 +16,7 @@ namespace Layer.Data.Migrations
 
         protected override void Seed(NailViecAppContext context)
         {
-            CountryInitData.InitData(context);
-
+            //CountryInitData.InitData(context);
             //AddExampleApplicant(context);
             //AddExampleCv(context);
             //AddExampleJob(context);

@@ -19,7 +19,15 @@ namespace Layer.Data
 
         private void RegisterRepositories(ContainerBuilder builder)
         {
-            builder.RegisterType<CountryRepository>().As<ICountryRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ShopRepository>().As<IShopRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ShopStatusRepository>().As<IShopStatusRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ShopStatusHistoryRepository>().As<IShopStatusHistoryRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<ShopOwnerRepository>().As<IShopOwnerRepository>().InstancePerLifetimeScope();
+
+            builder.RegisterType<JobRepository>().As<IJobRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<JobStatusRepository>().As<IJobStatusRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<JobStatusHistoryRepository>().As<IJobStatusHistoryRepository>().InstancePerLifetimeScope();
+            builder.RegisterType<JobTypeRepository>().As<IJobTypeRepository>().InstancePerLifetimeScope();
         }
 
         private void RegisterContexts(ContainerBuilder builder)
