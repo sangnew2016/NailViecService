@@ -6,6 +6,8 @@ namespace Layer.Data.Mapping
     {
         public JobTypeMapping() {
             Property(x => x.Name).IsRequired();
+
+            HasMany(x => x.Jobs);
         }
     }
 }

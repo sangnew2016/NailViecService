@@ -6,6 +6,9 @@ namespace Layer.Data.Mapping
     {
         public ShopStatusMapping() {
             Property(x => x.Name).IsRequired();
+
+            HasMany(x => x.Shops);
+            HasMany(x => x.ShopStatusHistories);
         }
     }
 }

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.Owin;
+﻿using Microsoft.Owin;
 using Owin;
-using Autofac;
 using System.Web.Mvc;
 using Autofac.Integration.Mvc;
-using Layer.Application;
+using Layer.Admin.App_Start;
 
 [assembly: OwinStartup(typeof(Layer.Admin.Startup))]
 
@@ -21,16 +17,7 @@ namespace Layer.Admin
         }
 
         private void RegisterDependencies() {
-            var builder = new ContainerBuilder();
-            builder.RegisterModule(new AdminModule());
-            //builder.RegisterModule(new ApplicationModule());
-            //builder.RegisterModule(new DomainModule());
-            //builder.RegisterModule(new DataModule());
-
-            // OPTIONAL: Enable property injection into action filters.
-            builder.RegisterFilterProvider();
-
-            //set Autofac as default Dependency Resolver for application
+            var builder = AutofacConfig.Configure();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(builder.Build()));
         }
     }

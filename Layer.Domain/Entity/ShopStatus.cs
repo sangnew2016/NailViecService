@@ -8,6 +8,7 @@ namespace Layer.Domain.Entity
         public string Name { get; set; }
         public bool IsShow { get; set; }
 
+        public virtual ICollection<Shop> Shops { get; set; }
         public virtual ICollection<ShopStatusHistory> ShopStatusHistories { get; set; }
     }
 }

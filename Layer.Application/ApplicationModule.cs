@@ -7,7 +7,7 @@ namespace Layer.Application
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterType<ShopAppService>().InstancePerLifetimeScope();
+            builder.RegisterType<ShopAppService>().As<ShopAppService>().InstancePerLifetimeScope();
         }
     }
 }

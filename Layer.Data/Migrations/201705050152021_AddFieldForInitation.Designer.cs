@@ -13,7 +13,7 @@ namespace Layer.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201703130450457_AddFieldForInitation"; }
+            get { return "201705050152021_AddFieldForInitation"; }
         }
         
         string IMigrationMetadata.Source

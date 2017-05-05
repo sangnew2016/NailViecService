@@ -8,7 +8,8 @@ namespace Layer.Data.Mapping
             Property(x => x.Name).IsRequired();
             Property(x => x.Phone).IsRequired();
             Property(x => x.Address).IsRequired();
-            Property(x => x.PlaceId).IsRequired();
+
+            Property(x => x.RowVersion).IsRowVersion();
         }
     }
 }

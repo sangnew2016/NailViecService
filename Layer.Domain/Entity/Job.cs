@@ -12,6 +12,8 @@ namespace Layer.Domain.Entity
         public string ImageUrl { get; set; }
 
         public long JobId { get; set; }
+
+        public long JobTypeId { get; set; }
         public JobType JobType { get; set; }
 
         public long JobStatusId { get; set; }

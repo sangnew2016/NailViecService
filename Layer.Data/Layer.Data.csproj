@@ -63,9 +63,9 @@
     <Compile Include="Mapping\JobMapping.cs" />
     <Compile Include="Mapping\JobStatusHistoryMapping.cs" />
     <Compile Include="Mapping\ShopMapping.cs" />
-    <Compile Include="Migrations\201703130450457_AddFieldForInitation.cs" />
-    <Compile Include="Migrations\201703130450457_AddFieldForInitation.Designer.cs">
-      <DependentUpon>201703130450457_AddFieldForInitation.cs</DependentUpon>
+    <Compile Include="Migrations\201705050152021_AddFieldForInitation.cs" />
+    <Compile Include="Migrations\201705050152021_AddFieldForInitation.Designer.cs">
+      <DependentUpon>201705050152021_AddFieldForInitation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NailViecAppContext.cs" />
@@ -97,8 +97,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201703130450457_AddFieldForInitation.resx">
-      <DependentUpon>201703130450457_AddFieldForInitation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201705050152021_AddFieldForInitation.resx">
+      <DependentUpon>201705050152021_AddFieldForInitation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -21,7 +21,7 @@ namespace Layer.Domain.Entity
         public string StateName { get; set; }
         public string CountryName { get; set; }
 
-        public virtual ICollection<Shop> Shops { get; set; }
+        public long ShopId { get; set; }
 
     }
 }

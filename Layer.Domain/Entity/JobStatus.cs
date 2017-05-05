@@ -8,6 +8,7 @@ namespace Layer.Domain.Entity
         public string Name { get; set; }
         public bool IsShow { get; set; }
 
+        public virtual ICollection<Job> Jobs { get; set; }
         public virtual ICollection<JobStatusHistory> JobStatusHistories { get; set; }
     }
 }
